@@ -35,7 +35,8 @@ function ContentBlock(props) {
       <div className="contentBlock-title-container">
         {props.icon && (
           <img
-            src={props.iconUrl}
+            className="contentBlock-icon"
+            src={props.icon}
             alt={`${props.title}-icon`}
           />
         )}
@@ -56,15 +57,7 @@ function ContentBlock(props) {
         </span>
       )}
       <div className="contentBlock-content">
-        {props.contentImage &&
-        props.contentImage.startsWith("<svg") ? (
-          <span
-            className="contentBlock-svg"
-            dangerouslySetInnerHTML={{
-              __html: props.contentImage,
-            }}
-          />
-        ) : (
+        {props.contentImage && (
           <img
             className="content-img"
             src={props.contentImage}

@@ -7,6 +7,12 @@
   margin: 30px;
 }
 
+.contentBlock-title-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .contentBlock-children {
   display: flex;
   gap: 30px;
@@ -37,4 +43,11 @@
   width: 235px;
   height: auto;
   border-radius: 50%;
+}
+
+.contentBlock-icon {
+  width: 54px;
+  height: auto;
+  filter: invert(100%);
+  margin-bottom: 15px;
 }
