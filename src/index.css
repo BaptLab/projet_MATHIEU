@@ -10,6 +10,7 @@ body {
   text-align: justify;
   background-image: url("../src/assets/images/black-background.jpg");
   background-position: center;
+
   display: flex;
   justify-content: center;
   white-space: pre-line;
@@ -31,10 +32,23 @@ code {
 }
 
 .page-container {
-  margin: 0% 9%;
-  max-width: 1500px;
+  margin: 0% 1%;
+
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-container {
+    margin: 0% 2%;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  .page-container {
+    margin: 0px;
+  }
 }

@@ -1,6 +1,6 @@
 footer {
   bottom: 0;
-  margin-top: 70px;
+  margin-top: 50px;
   height: 180px;
   color: grey;
   font-weight: bold;
@@ -9,4 +9,5 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 35px 35px 0px 0px;
 }

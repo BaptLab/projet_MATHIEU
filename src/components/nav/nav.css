@@ -4,7 +4,7 @@
   background-color: #242424;
   margin: 30px;
   width: fit-content;
-  padding: 35px 30px;
+  padding: 25px 25px;
   border-radius: 45px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -14,4 +14,26 @@ nav {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  #backBtn-container {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-container {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
 }

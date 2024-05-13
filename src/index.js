@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Homepage from "./pages/homepage/Homepage";
+import Matos from "./pages/matos/matos";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -16,6 +17,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/Matériel" element={<Matos />} />
       </Routes>
     </Router>
   </React.StrictMode>

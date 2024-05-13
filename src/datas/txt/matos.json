@@ -1,0 +1,114 @@
+{
+  "intro": "Découvrez la gamme complète de mon matériel professionnel, prêt à être utilisé aussi bien sur le terrain lors de tournages que dans mon studio. De microphones de qualité en passant par des consoles de mixage sophistiquées, mon équipement garantit une qualité audio exceptionnelle, quel que soit le projet.",
+  "matos_tournage": {
+    "Enregistreur": [
+      "Sound Devices Mixpre 10-II",
+      "Zoom H1N"
+    ],
+    "Microphones": {
+      "Perche": "Sennheiser MKH416",
+      "Stéréo": "Couple Stéréo Oktava mk012 MSP4",
+      "Microphone Main, Dynamique": "Rode Reporter",
+      "Lavalier": [
+        "Sanken COS11",
+        "Deity w-Lav x4",
+        "Rode Wireless GO",
+        "Sennheiser ME2",
+        "Sennheiser ME4"
+      ],
+      "Serre-tête": "The T-bone HeadMike",
+      "Large Membrane (Voix-off, podcast)": "Scarlett Studio CM25 MkII",
+      "Dynamique (Voix-off, podcast)": "RODE Podmics x3"
+    },
+    "HF": [
+      "Sennheiser EW122P G4 x2 + 1 HF XLR (2 sujets simultanés)",
+      "Deity THEOS (2 sujets simultanés)",
+      "Rode Wireless GO (1 sujet, monitoring HF)",
+      "Kit HF Deity Connect (IEM, monitoring HF)"
+    ],
+    "Casque": [
+      "Sennheiser HD25 Plus",
+      "Focusrite Scarlett Studio"
+    ],
+    "Perche": [
+      "Perche Ktek K110ccr",
+      "Perche Rode MicroBoomPole",
+      "Pied de micro K&M",
+      "Pied StandPro"
+    ],
+    "Supports de stockage": [
+      "2x Carte SD 64Go",
+      "USB Thumb Drive"
+    ],
+    "Accessoires": [
+      "Chariot-valise Orca OR-48",
+      "Sacoche Orca OR-280",
+      "Rode BLIMP",
+      "Barre de couple K&M",
+      "Perche sur pied x2"
+    ],
+    "Câblage": [
+      "5x câbles XLR3b",
+      "1x Câble BNC 75 ohms (Timecode)",
+      "2x câbles TA3 -> XLRm"
+    ],
+    "Alimentations et Batteries": [
+      "Alimentation Secteur-Hirose (Mixpre)",
+      "≃ 10 batteries LR06 rechargeables + 10 batteries LR03 rechargeables + Chargeur",
+      "2x Batteries L-Mount NP-F970 + Chargeur",
+      "2x Batteries eSmart Audioroot + Chargeur"
+    ],
+    "Contrôleur": [
+      "Korg Nanokontrol Studio",
+      "Tablette Samsung Galaxy Tab7"
+    ]
+  },
+  "matos_studio": {
+    "Station de travail audio-numérique (DAWs)": [
+      "Pro Tools Studio",
+      "Reaper",
+      "DaVinci Resolve"
+    ],
+    "Interface audio": [
+      "Native Instruments Komplete Audio 6",
+      "Sound Devices MixPre-10II"
+    ],
+    "Monitoring": {
+      "Ecrans": "3 Ecrans HD",
+      "Enceintes": "Focal Shape 40",
+      "Casque": "Sennheiser HD25 Plus",
+      "Sound ID Reference": "Émulateur de différents systèmes d’écoute",
+      "Bose Mini-II SoundLink": "Enceinte de référence pour écoute sur système grand public"
+    },
+    "Microphones": {
+      "Condensateur Petite Membrane (Voix-Off)": "Sennheiser MKH416",
+      "Condensateur Petite Membrane (Stéréo, Instruments)": "Oktava MK012 MSP4",
+      "Large Membrane": "Scarlett Studio CM25 MkII",
+      "Dynamique (Voix-Off, Podcast)": "RODE Podmic x3"
+    },
+    "Contrôleurs": [
+      "Behringer Xtouch + Xtouch Extender",
+      "Clavier Roland A-800 Pro"
+    ],
+    "Instruments": [
+      "Guitare Classique Winzz",
+      "Guitare Electro-acoustique Ibanez Talman TCY10E",
+      "Basse Chowny Retrovibe (Davie504 Signature)"
+    ],
+    "Instruments supplémentaires": "Handpan, Tambourins, maracas, flutes…",
+    "Instruments Virtuels": {
+      "Native Instruments Komplete 14": "Suite d’instruments virtuels pour composition musicale",
+      "Guitar Rig 6": "Amplis de guitare virtuels",
+      "Spitfire Audio BBC Orchestra, Choir and Rare Flutes": "",
+      "Edward Ultimate Suite": "Instrument virtuel de bruitage (vêtements, bruits de pas…)"
+    },
+    "Plug-ins": {
+      "Izotope RX10 Standard": "Suite de plugins de nettoyage de voix (Denoise, De-reverb, Declick…) + OPTION IA",
+      "Izotope Neutron 4": "Plugin de mixage, EQs, compresseurs + OPTION IA",
+      "Izotope Ozone 10 Elements": "Plugin de mastering",
+      "Decibel": "plugin de Metering, visualisation complète des différents éléments à mixer",
+      "Soundly": "Logiciel de banque de son, centralisant mes banques de son, et proposant un service en ligne pour élargir la recherche sonore si je ne possède pas encore les sons que vous recherchez pour votre projet.",
+      "Vordio 6": "Logiciel de conversion de sessions de travail, permettant de m’adapter à différents workflows."
+    }
+  }
+}

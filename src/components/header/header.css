@@ -5,4 +5,17 @@ header {
   align-items: center;
   color: white;
   font-size: 5em;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  header {
+    font-size: 3em;
+  }
 }

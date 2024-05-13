@@ -1,14 +1,31 @@
-.btn-container .btn-container-txt {
+.btn-container {
   background-color: #383434;
   padding: 12px 24px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  color: white;
-  font-weight: bold;
   text-decoration: none;
 }
 
-.btn-container .btn-container-txt:hover {
+.btn-container .btn-container-txt {
+  font-weight: bold;
+
+  color: white; /* Transition for the filter property */
+}
+
+.btn-container:hover {
   filter: brightness(120%);
-  transition: filter 0.25s ease; /* Transition for the filter property */
+  transition: filter 0.25s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .btn-container .btn-container-txt {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  .btn-container {
+    width: 70%;
+  }
 }

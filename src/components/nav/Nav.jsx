@@ -4,7 +4,7 @@ import "./nav.css";
 function Nav() {
   return (
     <nav>
-      <div className="nav-container">
+      <div className="nav-container" id="backBtn-container">
         <NavBtn txt="Retour"></NavBtn>
       </div>
       <div className="nav-container">

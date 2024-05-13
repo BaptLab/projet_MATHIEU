@@ -28,8 +28,47 @@ function ContentBlock(props) {
       depth
     );
 
+  // Function to render multiple content items when an array is passed
+  const renderContentText = () => {
+    if (Array.isArray(props.contentText)) {
+      return props.contentText.map((item, index) => (
+        <span key={index} className="contentBlock-content">
+          {item}
+        </span>
+      ));
+    } else if (typeof props.contentText === "object") {
+      return Object.entries(props.contentText).map(
+        ([subtitle, list], index) => (
+          <div key={index}>
+            <span className="contentBlock-subtitle">
+              {subtitle}
+            </span>
+            {Array.isArray(list) ? (
+              <ul>
+                {list.map((item, itemIndex) => (
+                  <li key={itemIndex}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <span className="contentBlock-content">
+                {list}
+              </span>
+            )}
+          </div>
+        )
+      );
+    } else {
+      return (
+        <span className="contentBlock-content">
+          {props.contentText}
+        </span>
+      );
+    }
+  };
+
   return (
     <div
+      id={props.id}
       className={`contentBlock-container contentBlock-level-${depth}`}
     >
       <div className="contentBlock-title-container">
@@ -64,11 +103,7 @@ function ContentBlock(props) {
             alt="image"
           />
         )}
-        {props.contentText && (
-          <span className="contentBlock-content">
-            {props.contentText}
-          </span>
-        )}
+        {renderContentText()}
       </div>
       <div className="contentBlock-children">
         {childrenWithClassNameAndDepth}
