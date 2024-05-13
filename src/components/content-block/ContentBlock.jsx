@@ -31,11 +31,18 @@ function ContentBlock(props) {
   // Function to render multiple content items when an array is passed
   const renderContentText = () => {
     if (Array.isArray(props.contentText)) {
-      return props.contentText.map((item, index) => (
-        <span key={index} className="contentBlock-content">
-          {item}
-        </span>
-      ));
+      return (
+        <ul>
+          {props.contentText.map((item, index) => (
+            <li
+              key={index}
+              className="contentBlock-content"
+            >
+              • {item} ;
+            </li>
+          ))}
+        </ul>
+      );
     } else if (typeof props.contentText === "object") {
       return Object.entries(props.contentText).map(
         ([subtitle, list], index) => (
@@ -82,6 +89,7 @@ function ContentBlock(props) {
         {props.title && (
           <h2 className="contentBlock-title">
             {props.title}
+            {props.infos ? "*" : null}
           </h2>
         )}
         {props.titleIntroText && (
@@ -90,11 +98,20 @@ function ContentBlock(props) {
           </span>
         )}
       </div>
-      {props.subtitle && (
-        <span className="contentBlock-subtitle">
-          {props.subtitle}
-        </span>
-      )}
+      <div className="subtitle-container">
+        {props.subtitle &&
+          Object.entries(props.subtitle).map(
+            ([key, value], index) => (
+              <span
+                key={index}
+                className="contentBlock-subtitle"
+              >
+                {value}
+              </span>
+            )
+          )}
+      </div>
+
       <div className="contentBlock-content">
         {props.contentImage && (
           <img
@@ -104,6 +121,11 @@ function ContentBlock(props) {
           />
         )}
         {renderContentText()}
+        {props.infos && (
+          <span className="contentBlock-content-infos">
+            * {props.infos}
+          </span>
+        )}
       </div>
       <div className="contentBlock-children">
         {childrenWithClassNameAndDepth}

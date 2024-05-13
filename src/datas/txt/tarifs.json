@@ -1,0 +1,34 @@
+{
+  "tarifs_data": {
+    "tournage": {
+      "description": ["Prise de son"],
+      "prix": {
+        "prix_demi": "400€ / Demi-journée",
+        "prix_journée": "600€ / Journée"
+      }
+    },
+    "montage": {
+      "description": [
+        "Recherche sonore",
+        "Sound design",
+        "Habillage sonore"
+      ],
+      "prix": {
+        "prix_heure": "60€ / heure",
+        "prix_journée": "250€ / journée"
+      },
+
+      "info": "+10€ / jour si recherche sonore prévue"
+    },
+    "mixage": {
+      "description": [
+        "Équilibrage des différentes pistes audio",
+        "Conformation aux normes audio du support de diffusion prévu"
+      ],
+      "prix": {
+        "prix_heure": "60€ / heure",
+        "prix_journée": "300€ / journée"
+      }
+    }
+  }
+}
