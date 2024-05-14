@@ -4,7 +4,12 @@
   margin: 30px 50px;
   width: fit-content;
 }
-
+.regular-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 0;
+}
 nav {
   display: flex;
   align-items: center;
@@ -12,7 +17,71 @@ nav {
   width: 100%;
   position: absolute;
   top: 120px;
-  z-index: 0;
+}
+
+/* Sidenav menu */
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 90px;
+  right: -250px;
+  background-color: #111;
+  padding-top: 60px;
+  transition: right 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #111;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  right: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+  border-radius: 2px;
+}
+
+.burger-icon {
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 2;
 }
 
 @media screen and (max-width: 1024px) {
@@ -20,19 +89,34 @@ nav {
     display: none;
   }
 
+  .sidenav {
+    display: block;
+  }
+
+  .burger-icon {
+    display: block;
+  }
   nav {
-    justify-content: center;
+    justify-content: end;
+  }
+
+  .regular-nav {
+    display: none;
   }
 }
 
 @media screen and (max-width: 811px) {
-  nav {
-    flex-direction: column;
+  .burger-icon {
+    top: 17px;
+    right: 25px;
   }
 
-  .nav-container {
-    gap: 15px;
-    flex-direction: column;
-    align-items: center;
+  .burger-icon span {
+    width: 35px;
+    height: 4px;
+  }
+
+  .sidenav {
+    top: 70px;
   }
 }

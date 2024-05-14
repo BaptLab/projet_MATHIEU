@@ -8,19 +8,24 @@ header {
   margin-bottom: 30px;
   position: fixed;
   top: 0px;
-  background-color: black;
+  background-color: #111;
   width: 100vw;
   z-index: 1;
 }
 
 @media screen and (max-width: 1024px) {
   header {
+    justify-content: start;
+    padding-left: 50px;
     text-align: start;
+    font-size: 3em;
+    height: 90px;
   }
 }
 
 @media screen and (max-width: 811px) {
   header {
-    font-size: 3em;
+    height: 70px;
+    font-size: 2.5em;
   }
 }
