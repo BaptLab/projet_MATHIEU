@@ -1,11 +1,16 @@
 header {
-  height: 170px;
+  height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 5em;
   margin-bottom: 30px;
+  position: fixed;
+  top: 0px;
+  background-color: black;
+  width: 100vw;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1024px) {

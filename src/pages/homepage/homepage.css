@@ -1,0 +1,25 @@
+.activité-container {
+  display: flex;
+}
+
+.activité-container .contentBlock-container {
+  width: 30%;
+}
+
+.content-block {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-block h2,
+span {
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+#présentation-perso {
+  max-width: 900px;
+}
