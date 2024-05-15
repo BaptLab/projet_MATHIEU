@@ -98,19 +98,21 @@ function ContentBlock(props) {
           </span>
         )}
       </div>
-      <div className="subtitle-container">
-        {props.subtitle &&
-          Object.entries(props.subtitle).map(
-            ([key, value], index) => (
-              <span
-                key={index}
-                className="contentBlock-subtitle"
-              >
-                {value}
-              </span>
-            )
-          )}
-      </div>
+      {props.subtitle && (
+        <div className="subtitle-container">
+          {props.subtitle &&
+            Object.entries(props.subtitle).map(
+              ([key, value], index) => (
+                <span
+                  key={index}
+                  className="contentBlock-subtitle"
+                >
+                  {value}
+                </span>
+              )
+            )}
+        </div>
+      )}
 
       <div className="contentBlock-content">
         {props.contentImage && (

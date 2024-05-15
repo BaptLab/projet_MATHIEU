@@ -1,7 +1,7 @@
 import "./header.css";
 
 function Header() {
-  return <header>TRUE PEAK PRODUCTION</header>;
+  return <header>TRUEPEAKS PRODUCTION</header>;
 }
 
 export default Header;

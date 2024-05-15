@@ -1,13 +1,13 @@
 footer {
   bottom: 0;
-  margin-top: 50px;
-  height: 180px;
-  color: grey;
+  margin-top: 80px;
+  height: 160px;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   width: 100vw;
-  background-color: #262525;
+  background-color: black;
   display: flex;
+  border-top: 1px solid rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
-  border-radius: 35px 35px 0px 0px;
 }

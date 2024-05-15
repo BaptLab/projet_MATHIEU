@@ -8,7 +8,7 @@ import data from "../../datas/txt/homepage.json";
 import camera from "../../assets/images/icons/camera.svg";
 import headphones from "../../assets/images/icons/headphones.svg";
 import sound from "../../assets/images/icons/sound.svg";
-import studioImg from "../../assets/images/photos/studio/studio.jpg";
+import studioImg from "../../assets/images/photos/studio/studio2.jpg";
 import "./homepage.css";
 
 function Homepage() {
@@ -18,21 +18,28 @@ function Homepage() {
     <div className="page-container">
       <Header />
       <img className="page-img" src={studioImg} />
+      <div id="img-fade"></div>
       <Nav />
       <main>
         <div className="content-container">
-          <div className="content-block">
+          <div className="content-block intro-block">
             <h2 className="title">{data.question}</h2>
             <span className="intro-text">
               {data.présentation}
             </span>
-            <ContentBlock
-              id="présentation-perso"
-              contentImage={img}
-              contentText={data.présentation_perso}
-            />
           </div>
-
+          <div
+            className="content-block"
+            id="présentation-perso"
+          >
+            <h2 className="title">
+              Truepeaks, c'est qui ?
+            </h2>
+            <div className="présentation-perso-content">
+              <img id="pp" src={img} />
+              <p>{data.présentation_perso}</p>
+            </div>
+          </div>
           <div className="content-block">
             <h2 className="title">Mes activités</h2>
             <div className="activité-container">
