@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/projet_MATHIEU/static/css/main.3b9ea207.css",
+    "main.css": "/projet_MATHIEU/static/css/main.db22d57b.css",
     "main.js": "/projet_MATHIEU/static/js/main.cb028eb2.js",
     "static/media/studio2.jpg": "/projet_MATHIEU/static/media/studio2.fdc089552c2786764235.jpg",
     "static/media/pp.jpg": "/projet_MATHIEU/static/media/pp.82e47eceae8b661c0130.jpg",
@@ -8,11 +8,11 @@
     "static/media/sound.svg": "/projet_MATHIEU/static/media/sound.03b48247ae5063d379766d1cf5dfb756.svg",
     "static/media/headphones.svg": "/projet_MATHIEU/static/media/headphones.152e60c022a4bd33c87c7cc526b567bd.svg",
     "static/media/camera.svg": "/projet_MATHIEU/static/media/camera.098c7da6528eecba339adfdcd174c511.svg",
-    "main.3b9ea207.css.map": "/projet_MATHIEU/static/css/main.3b9ea207.css.map",
+    "main.db22d57b.css.map": "/projet_MATHIEU/static/css/main.db22d57b.css.map",
     "main.cb028eb2.js.map": "/projet_MATHIEU/static/js/main.cb028eb2.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b9ea207.css",
+    "static/css/main.db22d57b.css",
     "static/js/main.cb028eb2.js"
   ]
 }
