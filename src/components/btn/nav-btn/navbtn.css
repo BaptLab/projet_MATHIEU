@@ -1,7 +1,7 @@
 .btn-container {
-  background-color: #000000;
+  background-color: #208be2;
   padding: 12px 24px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 4px 0px rgba(37, 37, 37, 0.5);
   border-radius: 20px;
   text-decoration: none;
 }
@@ -12,7 +12,7 @@
 }
 
 .btn-container:hover {
-  filter: brightness(120%);
+  filter: brightness(110%);
   transition: filter 0.25s ease;
 }
 
@@ -24,8 +24,8 @@
   }
 
   .btn-container {
-    background-color: #111;
     border-radius: 0px;
+    background-color: black;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
   }
 }

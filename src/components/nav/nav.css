@@ -3,6 +3,7 @@
   gap: 30px;
   margin: 30px 50px;
   width: fit-content;
+  border-radius: 45px;
 }
 .regular-nav {
   display: flex;
@@ -23,28 +24,29 @@ nav {
 .sidenav {
   display: none;
   height: 100%;
-  width: 250px;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 90px;
-  right: -250px;
-  background-color: #111;
-  padding-top: 60px;
+  right: -200px;
+  background-color: #000000;
+  padding-top: 10px;
   transition: right 0.5s ease;
 }
 
 /* Sidenav menu links */
 .sidenav a {
-  padding: 8px 8px 8px 20px;
+  padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #000000;
   display: block;
   transition: 0.3s;
+  width: 100%;
 }
 
 .sidenav a:hover {
-  color: #111;
+  background-color: #1f1e1e;
 }
 
 .sidenav ul {
@@ -71,7 +73,7 @@ nav {
   display: block;
   width: 35px;
   height: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: #208be2;
   margin: 6px 0;
   border-radius: 2px;
 }

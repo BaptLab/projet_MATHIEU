@@ -9,6 +9,7 @@ import camera from "../../assets/images/icons/camera.svg";
 import headphones from "../../assets/images/icons/headphones.svg";
 import sound from "../../assets/images/icons/sound.svg";
 import studioImg from "../../assets/images/photos/studio/studio2.jpg";
+import Button from "@mui/material/Button";
 import "./homepage.css";
 
 function Homepage() {
@@ -40,8 +41,9 @@ function Homepage() {
               <p>{data.présentation_perso}</p>
             </div>
           </div>
+          <span className="block-separation"></span>
           <div className="content-block">
-            <h2 className="title">Mes activités</h2>
+            <h2 className="title ">Mes activités</h2>
             <div className="activité-container">
               <ContentBlock
                 icon={camera}
@@ -58,6 +60,15 @@ function Homepage() {
                 title={montage.titre}
                 contentText={montage.content}
               />
+            </div>
+            <span className="block-separation"></span>
+            <div className="CTA-block">
+              <h2 className="title">
+                Vous avez un projet ?
+              </h2>
+              <Button variant="contained" color="primary">
+                Me contacter
+              </Button>
             </div>
           </div>
         </div>
