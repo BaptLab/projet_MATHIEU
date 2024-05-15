@@ -24,7 +24,7 @@ function Homepage() {
       <main>
         <div className="content-container">
           <div className="content-block intro-block">
-            <h2 className="title">{data.question}</h2>
+            <h2 className="title blue">{data.question}</h2>
             <span className="intro-text">
               {data.présentation}
             </span>
@@ -33,7 +33,7 @@ function Homepage() {
             className="content-block"
             id="présentation-perso"
           >
-            <h2 className="title">
+            <h2 className="title blue">
               Truepeaks, c'est qui ?
             </h2>
             <div className="présentation-perso-content">
@@ -63,7 +63,7 @@ function Homepage() {
             </div>
             <span className="block-separation"></span>
             <div className="CTA-block">
-              <h2 className="title">
+              <h2 className="title question">
                 Vous avez un projet ?
               </h2>
               <Button variant="contained" color="primary">

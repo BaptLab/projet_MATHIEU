@@ -16,6 +16,9 @@
   justify-content: space-between;
 }
 
+.blue {
+  color: #3bb0df;
+}
 .présentation-perso-content p {
   width: 58%;
 }
