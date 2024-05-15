@@ -10,7 +10,10 @@ import headphones from "../../assets/images/icons/headphones.svg";
 import sound from "../../assets/images/icons/sound.svg";
 import studioImg from "../../assets/images/photos/studio/studio2.jpg";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import "./homepage.css";
+import GoingUp from "../../components/btn/goingUp/GoingUp";
 
 function Homepage() {
   const [tournage, mixage, montage] = data.activités;
@@ -24,7 +27,7 @@ function Homepage() {
       <main>
         <div className="content-container">
           <div className="content-block intro-block">
-            <h2 className="title blue">{data.question}</h2>
+            <h2 className="title">{data.question}</h2>
             <span className="intro-text">
               {data.présentation}
             </span>
@@ -33,7 +36,7 @@ function Homepage() {
             className="content-block"
             id="présentation-perso"
           >
-            <h2 className="title blue">
+            <h2 className="title">
               Truepeaks, c'est qui ?
             </h2>
             <div className="présentation-perso-content">
@@ -61,7 +64,11 @@ function Homepage() {
                 contentText={montage.content}
               />
             </div>
+            <IconButton>
+              <KeyboardArrowDownRoundedIcon color="primary" />
+            </IconButton>
             <span className="block-separation"></span>
+
             <div className="CTA-block">
               <h2 className="title question">
                 Vous avez un projet ?
@@ -75,6 +82,7 @@ function Homepage() {
       </main>
 
       <Footer />
+      <GoingUp />
     </div>
   );
 }

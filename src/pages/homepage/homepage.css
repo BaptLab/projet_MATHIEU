@@ -16,9 +16,6 @@
   justify-content: space-between;
 }
 
-.blue {
-  color: #3bb0df;
-}
 .présentation-perso-content p {
   width: 58%;
 }
@@ -42,6 +39,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 40px;
 }
 .content-block .title {
   max-width: 900px;
