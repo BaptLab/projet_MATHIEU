@@ -36,7 +36,7 @@ function ContentBlock(props) {
           {props.contentText.map((item, index) => (
             <li
               key={index}
-              className="contentBlock-content"
+              className="contentBlock-content list-element"
             >
               • {item} ;
             </li>

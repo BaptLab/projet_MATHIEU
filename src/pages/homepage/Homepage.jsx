@@ -1,6 +1,8 @@
 import React from "react";
 import ContentBlock from "../../components/content-block/ContentBlock";
 import Nav from "../../components/nav/Nav";
+import Fab from "@mui/material/Fab";
+
 import img from "../../../src/assets/images/pp.jpg";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
@@ -9,14 +11,79 @@ import camera from "../../assets/images/icons/camera.svg";
 import headphones from "../../assets/images/icons/headphones.svg";
 import sound from "../../assets/images/icons/sound.svg";
 import studioImg from "../../assets/images/photos/studio/studio2.jpg";
+import { useState } from "react";
+import dataTarfis from "../../datas/txt/tarifs.json";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
+
+import projet1 from "../../assets/images/photos/projets/projet1.png";
+import projet2 from "../../assets/images/photos/projets/projet2.png";
+
 import "./homepage.css";
 import GoingUp from "../../components/btn/goingUp/GoingUp";
-
 function Homepage() {
+  const renderPriceBlock = (activity) => {
+    return (
+      <div
+        className="price-container contentBlock-container"
+        id={`prix-${activity}-container`}
+      >
+        <span className="price-prestation">
+          Préstations comprises :
+          <ul className="description-list">
+            {dataTarfis.tarifs_data[
+              activity
+            ].description.map((desc, index) => (
+              <li key={index}>{desc}</li>
+            ))}
+          </ul>
+        </span>
+        <div className="price-detail-container">
+          {Object.entries(
+            dataTarfis.tarifs_data[activity].prix
+          ).map(([key, value]) => (
+            <div key={key}>
+              <h3>{value}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const [tournage, mixage, montage] = data.activités;
+  let [tarifSwitch, setTarifSwitch] = useState(false);
+  let [
+    tournageTarifSwitchMobile,
+    setTournageTarifSwitchMobile,
+  ] = useState(false);
+  let [
+    mixageTarifSwitchMobile,
+    setMixageTarifSwitchMobile,
+  ] = useState(false);
+  let [
+    montageTarifSwitchMobile,
+    setMontageTarifSwitchMobile,
+  ] = useState(false);
+
+  const toggleTarifSwitch = () => {
+    setTarifSwitch(!tarifSwitch);
+  };
+  const toggleTournageTarifSwitchMobile = () => {
+    setTournageTarifSwitchMobile(
+      !tournageTarifSwitchMobile
+    );
+  };
+
+  const toggleMixageTarifSwitchMobile = () => {
+    setMixageTarifSwitchMobile(!mixageTarifSwitchMobile);
+  };
+
+  const toggleMontageTarifSwitchMobile = () => {
+    setMontageTarifSwitchMobile(!montageTarifSwitchMobile);
+  };
 
   return (
     <div className="page-container">
@@ -46,27 +113,154 @@ function Homepage() {
           </div>
           <span className="block-separation"></span>
           <div className="content-block">
-            <h2 className="title ">Mes activités</h2>
+            <h2 className="title">Mes activités</h2>
             <div className="activité-container">
               <ContentBlock
                 icon={camera}
                 title={tournage.titre}
                 contentText={tournage.content}
               />
+              <div className="price-mobile">
+                <div
+                  className={`activité-container ${
+                    tournageTarifSwitchMobile
+                      ? "show-tarif-mobile"
+                      : "hidden-tarif-mobile"
+                  }`}
+                  id="tarif-mobile"
+                >
+                  {renderPriceBlock("tournage")}
+                </div>
+                <Fab
+                  color="primary"
+                  aria-label="arrow-up"
+                  id="display-price-btn"
+                  onClick={toggleTournageTarifSwitchMobile}
+                  size="medium" // Set the size to small
+                >
+                  {!tarifSwitch && (
+                    <KeyboardArrowDownRoundedIcon />
+                  )}
+                  {tarifSwitch && (
+                    <KeyboardArrowUpRoundedIcon />
+                  )}
+                </Fab>
+              </div>
               <ContentBlock
                 icon={headphones}
                 title={mixage.titre}
                 contentText={mixage.content}
               />
+              <div className="price-mobile">
+                <div
+                  className={`activité-container ${
+                    mixageTarifSwitchMobile
+                      ? "show-tarif-mobile"
+                      : "hidden-tarif-mobile"
+                  }`}
+                  id="tarif-mobile"
+                >
+                  {renderPriceBlock("mixage")}
+                </div>
+                <Fab
+                  color="primary"
+                  aria-label="arrow-up"
+                  id="display-price-btn"
+                  onClick={toggleMixageTarifSwitchMobile}
+                  size="medium" // Set the size to small
+                >
+                  {!tarifSwitch && (
+                    <KeyboardArrowDownRoundedIcon />
+                  )}
+                  {tarifSwitch && (
+                    <KeyboardArrowUpRoundedIcon />
+                  )}
+                </Fab>
+              </div>
+
               <ContentBlock
                 icon={sound}
                 title={montage.titre}
                 contentText={montage.content}
               />
+              <div className="price-mobile">
+                <div
+                  className={`activité-container ${
+                    montageTarifSwitchMobile
+                      ? "show-tarif-mobile"
+                      : "hidden-tarif-mobile"
+                  }`}
+                  id="tarif-mobile"
+                >
+                  {renderPriceBlock("montage")}
+                </div>
+                <Fab
+                  color="primary"
+                  aria-label="arrow-up"
+                  id="display-price-btn"
+                  onClick={toggleMontageTarifSwitchMobile}
+                  size="medium" // Set the size to small
+                >
+                  {!tarifSwitch && (
+                    <KeyboardArrowDownRoundedIcon />
+                  )}
+                  {tarifSwitch && (
+                    <KeyboardArrowUpRoundedIcon />
+                  )}
+                </Fab>
+              </div>
             </div>
-            <IconButton>
-              <KeyboardArrowDownRoundedIcon color="primary" />
-            </IconButton>
+            <div id="desktop-section-tarif">
+              <div
+                className={`activité-container ${
+                  tarifSwitch
+                    ? "show-tarif-desktop"
+                    : "hidden-tarif-desktop"
+                }`}
+                id="tarif-desktop"
+              >
+                {renderPriceBlock("tournage")}
+                {renderPriceBlock("mixage")}
+                {renderPriceBlock("montage")}
+              </div>
+              {!tarifSwitch && (
+                <h3 className="tarif-title">
+                  Afficher les tarifs
+                </h3>
+              )}
+              {tarifSwitch && (
+                <h3 className="tarif-title">
+                  Masquer les tarifs
+                </h3>
+              )}
+              <Fab
+                color="primary"
+                aria-label="arrow-up"
+                id="display-price-btn"
+                onClick={toggleTarifSwitch}
+                size="medium" // Set the size to small
+              >
+                {!tarifSwitch && (
+                  <KeyboardArrowDownRoundedIcon />
+                )}
+                {tarifSwitch && (
+                  <KeyboardArrowUpRoundedIcon />
+                )}
+              </Fab>
+            </div>
+            <span className="block-separation"></span>
+            <div className="content-block">
+              <h2 className="title">
+                Mes derniers projets
+              </h2>
+              <div className="activité-container projet-container">
+                <ContentBlock contentImage={projet1} />
+                <ContentBlock contentImage={projet2} />
+              </div>
+              <Button variant="contained" color="primary">
+                Tous mes projets{" "}
+              </Button>
+            </div>
             <span className="block-separation"></span>
 
             <div className="CTA-block">

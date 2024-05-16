@@ -10,8 +10,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 112px;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .contentBlock-children {
@@ -53,6 +53,7 @@
   flex-direction: column;
   align-items: start;
   justify-content: start;
+  margin-bottom: 10px;
 }
 
 .contentBlock-content {
@@ -79,7 +80,7 @@
 .content-img {
   width: 235px;
   height: auto;
-  border-radius: 50%;
+  transition: 180ms;
 }
 
 .contentBlock-icon {
