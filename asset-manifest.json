@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/projet_MATHIEU/static/css/main.d0b756c8.css",
-    "main.js": "/projet_MATHIEU/static/js/main.af43cba6.js",
+    "main.css": "/projet_MATHIEU/static/css/main.a80ae084.css",
+    "main.js": "/projet_MATHIEU/static/js/main.ddd5264f.js",
+    "static/media/matos.jpg": "/projet_MATHIEU/static/media/matos.97a4054e37219ab058ff.jpg",
     "static/media/projet2.png": "/projet_MATHIEU/static/media/projet2.7ecfee829db5d7e4f9bc.png",
     "static/media/studio2.jpg": "/projet_MATHIEU/static/media/studio2.fdc089552c2786764235.jpg",
     "static/media/projet1.png": "/projet_MATHIEU/static/media/projet1.c14dab669b12aecdca63.png",
     "static/media/pp.jpg": "/projet_MATHIEU/static/media/pp.73022288e08c79808588.jpg",
+    "static/media/projet.png": "/projet_MATHIEU/static/media/projet.26e718c6002ebb4f9191.png",
     "index.html": "/projet_MATHIEU/index.html",
     "static/media/sound.svg": "/projet_MATHIEU/static/media/sound.5504c0e76792c1b77a5757fa7d6cd98b.svg",
     "static/media/headphones.svg": "/projet_MATHIEU/static/media/headphones.6c803f7a4f4b9819be3f4a3d0414d1ae.svg",
     "static/media/camera.svg": "/projet_MATHIEU/static/media/camera.230f28e9879f967173def1b58fc88efe.svg",
-    "main.d0b756c8.css.map": "/projet_MATHIEU/static/css/main.d0b756c8.css.map",
-    "main.af43cba6.js.map": "/projet_MATHIEU/static/js/main.af43cba6.js.map"
+    "main.a80ae084.css.map": "/projet_MATHIEU/static/css/main.a80ae084.css.map",
+    "main.ddd5264f.js.map": "/projet_MATHIEU/static/js/main.ddd5264f.js.map"
   },
   "entrypoints": [
-    "static/css/main.d0b756c8.css",
-    "static/js/main.af43cba6.js"
+    "static/css/main.a80ae084.css",
+    "static/js/main.ddd5264f.js"
   ]
 }
