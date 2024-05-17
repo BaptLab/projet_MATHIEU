@@ -95,7 +95,12 @@
       "Guitare Electro-acoustique Ibanez Talman TCY10E",
       "Basse Chowny Retrovibe (Davie504 Signature)"
     ],
-    "Instruments supplémentaires": "Handpan, Tambourins, maracas, flutes…",
+    "Instruments supplémentaires": [
+      "Handpan",
+      "Tambourins",
+      "maracas",
+      "flutes…"
+    ],
     "Instruments Virtuels": {
       "Native Instruments Komplete 14": "Suite d’instruments virtuels pour composition musicale",
       "Guitar Rig 6": "Amplis de guitare virtuels",

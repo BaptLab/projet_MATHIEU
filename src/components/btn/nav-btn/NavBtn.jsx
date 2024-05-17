@@ -3,7 +3,10 @@ import "./navbtn.css";
 
 function NavBtn(props) {
   return (
-    <Link className="btn-container" to={`/${props.txt}`}>
+    <Link
+      className="btn-container"
+      to={`/${props.redirect}`}
+    >
       <div className="btn-container-txt">{props.txt}</div>
     </Link>
   );

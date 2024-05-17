@@ -20,9 +20,18 @@ function Nav() {
         </div>
         <div className="nav-container">
           <NavBtn txt="Accueil"></NavBtn>
-          <NavBtn txt="Mon matériel"></NavBtn>
-          <NavBtn txt="Mes projets"></NavBtn>
-          <NavBtn txt="Me contacter"></NavBtn>
+          <NavBtn
+            redirect="matos"
+            txt="Mon matériel"
+          ></NavBtn>
+          <NavBtn
+            redirect="projets"
+            txt="Mes projets"
+          ></NavBtn>
+          <NavBtn
+            redirect="contact"
+            txt="Me contacter"
+          ></NavBtn>
         </div>
       </div>
       <div

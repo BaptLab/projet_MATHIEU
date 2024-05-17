@@ -23,6 +23,7 @@ import projet2 from "../../assets/images/photos/projets/projet2.png";
 
 import "./homepage.css";
 import GoingUp from "../../components/btn/goingUp/GoingUp";
+import Cta from "../../components/CTA/Cta";
 function Homepage() {
   const renderPriceBlock = (activity) => {
     return (
@@ -262,15 +263,7 @@ function Homepage() {
               </Button>
             </div>
             <span className="block-separation"></span>
-
-            <div className="CTA-block">
-              <h2 className="title question">
-                Vous avez un projet ?
-              </h2>
-              <Button variant="contained" color="primary">
-                Me contacter
-              </Button>
-            </div>
+            <Cta />
           </div>
         </div>
       </main>

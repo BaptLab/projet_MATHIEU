@@ -1,0 +1,14 @@
+.matos-category {
+  margin: 10px 0px;
+  align-self: flex-start;
+}
+
+.matos-element {
+  margin-bottom: 2px;
+  align-self: flex-start;
+}
+
+.content-block {
+  width: 100%;
+  max-width: 700px;
+}

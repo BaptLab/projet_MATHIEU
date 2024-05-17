@@ -1,0 +1,17 @@
+.content-container {
+  max-width: 900px;
+}
+.subtitle {
+  margin: 20px;
+}
+.projets-list {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.projets-list a {
+  margin-bottom: 2px;
+  text-decoration: inherit;
+  color: white;
+}

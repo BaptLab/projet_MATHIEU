@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Homepage from "./pages/homepage/Homepage";
 import Matos from "./pages/matos/matos";
-import Tarifs from "./pages/tarifs/Tarifs";
+import Projets from "./pages/projets/Projet";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -18,8 +18,8 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/Matériel" element={<Matos />} />
-        <Route path="/Tarifs" element={<Tarifs />} />
+        <Route path="/Matos" element={<Matos />} />
+        <Route path="/Projets" element={<Projets />} />
       </Routes>
     </Router>
   </React.StrictMode>
