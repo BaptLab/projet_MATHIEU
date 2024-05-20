@@ -22,8 +22,8 @@ function Matos() {
       <main>
         <div className="content-container">
           <h2 className="title">Mon matériel</h2>
-          <span className="intro">{data.intro}</span>
-          <div className="content-block">
+          <span className="intro matos">{data.intro}</span>
+          <div className="content-block matos">
             <h3 className="subtitle">
               Matériel de tournage
             </h3>
@@ -56,7 +56,7 @@ function Matos() {
               )
             )}
           </div>
-          <div className="content-block">
+          <div className="content-block matos">
             <h3 className="subtitle">Matériel de Studio</h3>
             {Object.entries(data.matos_studio).map(
               ([category, items]) => (
