@@ -1,8 +1,9 @@
-.content-container {
+#projets-container {
   max-width: 900px;
 }
 .subtitle {
-  margin: 20px;
+  margin-bottom: 15px;
+  margin-top: 30px;
 }
 .projets-list {
   align-self: flex-start;
@@ -11,7 +12,11 @@
 }
 
 .projets-list a {
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   text-decoration: inherit;
   color: white;
+}
+
+.category-container {
+  width: 100%;
 }

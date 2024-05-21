@@ -7,6 +7,7 @@ import data from "../../datas/txt/matos.json";
 import matosImg from "../../assets/images/photos/studio/matos.jpg"; // Assurez-vous de fournir le chemin correct
 import "./matos.css";
 import Cta from "../../components/CTA/Cta";
+import GoingUp from "../../components/btn/goingUp/GoingUp";
 
 function Matos() {
   return (
@@ -92,6 +93,7 @@ function Matos() {
       <Cta />
 
       <Footer />
+      <GoingUp />
     </div>
   );
 }

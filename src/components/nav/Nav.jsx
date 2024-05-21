@@ -15,11 +15,9 @@ function Nav() {
         <div
           className="nav-container"
           id="backBtn-container"
-        >
-          <NavBtn txt="Retour"></NavBtn>
-        </div>
+        ></div>
         <div className="nav-container">
-          <NavBtn txt="Accueil"></NavBtn>
+          <NavBtn redirect="" txt="Accueil"></NavBtn>
           <NavBtn
             redirect="matos"
             txt="Mon matériel"
@@ -37,20 +35,22 @@ function Nav() {
       <div
         className={`sidenav ${isNavOpen ? "active" : ""}`}
       >
-        <NavBtn txt="Accueil"></NavBtn>
-        <NavBtn txt="Tarifs"></NavBtn>
-        <NavBtn txt="Matériel"></NavBtn>
-        <NavBtn txt="Projets"></NavBtn>
-        <NavBtn txt="Me contacter"></NavBtn>
+        <NavBtn redirect="" txt="Accueil"></NavBtn>
+        <NavBtn redirect="Matos" txt="Matériel"></NavBtn>
+        <NavBtn redirect="Projets" txt="Projets"></NavBtn>
+        <NavBtn
+          redirect="Contact"
+          txt="Me contacter"
+        ></NavBtn>
       </div>
 
-      <a href="#" className="openBtn" onClick={switchNav}>
+      <div className="openBtn" onClick={switchNav}>
         <span className="burger-icon">
           <span></span>
           <span></span>
           <span></span>
         </span>
-      </a>
+      </div>
     </nav>
   );
 }

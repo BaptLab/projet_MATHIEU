@@ -2,8 +2,9 @@ import React from "react";
 import ContentBlock from "../../components/content-block/ContentBlock";
 import Nav from "../../components/nav/Nav";
 import Fab from "@mui/material/Fab";
+import { useCustomNavigate } from "../../utils/navigationUtils";
 
-import img from "../../../src/assets/images/pp.jpg";
+import img from "../../../src/assets/images/pp.png";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import data from "../../datas/txt/homepage.json";
@@ -14,7 +15,6 @@ import studioImg from "../../assets/images/photos/studio/studio2.jpg";
 import { useState } from "react";
 import dataTarfis from "../../datas/txt/tarifs.json";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRounded";
 
@@ -25,6 +25,10 @@ import "./homepage.css";
 import GoingUp from "../../components/btn/goingUp/GoingUp";
 import Cta from "../../components/CTA/Cta";
 function Homepage() {
+  const customNavigate = useCustomNavigate();
+  const link1 =
+    "https://www.allocine.fr/film/fichefilm_gen_cfilm=312684.html";
+  const link2 = "https://nouveausouffledocu.fr/";
   const renderPriceBlock = (activity) => {
     return (
       <div
@@ -104,9 +108,7 @@ function Homepage() {
             className="content-block"
             id="présentation-perso"
           >
-            <h2 className="title">
-              Truepeaks, c'est qui ?
-            </h2>
+            <h2 className="title">Truepeak, c'est qui ?</h2>
             <div className="présentation-perso-content">
               <img id="pp" src={img} />
               <p>{data.présentation_perso}</p>
@@ -255,10 +257,36 @@ function Homepage() {
                 Mes derniers projets
               </h2>
               <div className="activité-container projet-container">
-                <ContentBlock contentImage={projet1} />
-                <ContentBlock contentImage={projet2} />
+                <div className="contentBlock-container">
+                  <a
+                    href={link1}
+                    target="_blank"
+                    className="contentBlock-content"
+                  >
+                    <img
+                      className="content-img"
+                      src={projet1}
+                    />
+                  </a>
+                </div>
+                <div className="contentBlock-container">
+                  <a
+                    className="contentBlock-content"
+                    href={link2}
+                    target="_blank"
+                  >
+                    <img
+                      className="content-img"
+                      src={projet2}
+                    />
+                  </a>
+                </div>
               </div>
-              <Button variant="contained" color="primary">
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => customNavigate("Projets")}
+              >
                 Tous mes projets{" "}
               </Button>
             </div>
@@ -267,7 +295,6 @@ function Homepage() {
           </div>
         </div>
       </main>
-
       <Footer />
       <GoingUp />
     </div>

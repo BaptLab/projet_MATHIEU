@@ -84,6 +84,9 @@ main {
   margin-bottom: 50px;
 }
 
+.title {
+  margin-bottom: 32px;
+}
 .underlined {
   text-decoration: underline;
 }

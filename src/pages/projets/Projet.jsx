@@ -15,44 +15,43 @@ function Projets() {
       <div id="img-fade"></div>
       <Nav />
       <main>
-        <div className="content-container">
+        <div
+          className="content-container"
+          id="projets-container"
+        >
           <h2 className="title">Mes projets</h2>
           <div className="content-block">
-            <h3 className="subtitle" id="docus">
-              Documentaires
-            </h3>
-            <div className="projets-list">
-              {data.DOCUMENTAIRE.map((element, index) => (
-                <a
-                  className="projet-element"
-                  href={element.link}
+            {Object.entries(data).map(
+              ([category, projects]) => (
+                <div
+                  key={category}
+                  className="category-container"
                 >
-                  {element.title}
-                </a>
-              ))}
-            </div>
-
-            <h3 className="subtitle" id="interviews">
-              Interviews
-            </h3>
-            <div className="projets-list">
-              {data.INTERVIEWS.map((element, index) => (
-                <a
-                  className="projet-element"
-                  href={element.link}
-                >
-                  {element.title}
-                </a>
-              ))}
-            </div>
-
+                  <h3
+                    className="subtitle"
+                    id={category.toLowerCase()}
+                  >
+                    {category}
+                  </h3>
+                  <div className="projets-list">
+                    {projects.map((project, index) => (
+                      <a
+                        className="projet-element"
+                        href={project.link}
+                        key={index}
+                      >
+                        {project.title}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )
+            )}
             <span className="block-separation"></span>
-
             <Cta />
           </div>
         </div>
       </main>
-
       <Footer />
       <GoingUp />
     </div>

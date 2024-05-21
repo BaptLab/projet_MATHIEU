@@ -79,6 +79,7 @@ nav {
 }
 
 .burger-icon {
+  cursor: pointer;
   display: none;
   position: fixed;
   top: 25px;
