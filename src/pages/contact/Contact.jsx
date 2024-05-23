@@ -23,7 +23,7 @@ function Contact() {
       company,
       subject,
       message,
-      priority: "high", // Set the priority level to 'low'
+      priority: "high",
     };
 
     emailjs
@@ -44,7 +44,6 @@ function Contact() {
         console.error("FAILED...", error);
       });
 
-    // Clear form fields after submission
     setFirstName("");
     setLastName("");
     setCompany("");
@@ -63,6 +62,25 @@ function Contact() {
       <div id="img-fade"></div>
       <Nav />
       <main id="contact-page-content">
+        <div className="content-container">
+          <h2 className="title">Mes disponibilités</h2>
+          <div id="google-calendar">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&bgcolor=%23ffffff&showPrint=0&showTitle=0&showCalendars=0&showTz=0&src=YmFwdGlzdGUubGFiYXVuZUBnbWFpbC5jb20&src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5&color=%230B8043"
+              style={{
+                borderWidth: 0,
+                borderRadius: 15,
+                padding: 20,
+                backgroundColor: "white",
+                marginBottom: 60,
+              }} // Combine styles into a single object
+              width="800"
+              height="600"
+              frameBorder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
         <div className="content-container">
           <h2 className="title">Me contacter</h2>
           <form onSubmit={HandleSubmit}>

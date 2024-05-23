@@ -1,5 +1,9 @@
 #contact-page-content {
-  max-width: 1100px;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact-page-content form {
@@ -15,6 +19,10 @@
 
 #contact-page-content form .input-container label {
   margin-bottom: 7px;
+}
+
+#contact-page-content form button {
+  margin-top: 25px;
 }
 
 .required-asterisk {
