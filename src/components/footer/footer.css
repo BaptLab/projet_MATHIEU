@@ -7,7 +7,7 @@ footer {
   width: 100vw;
   background-color: black;
   display: flex;
-  border-top: 1px solid rgb(129, 127, 127);
+  border-top: 1px solid rgba(129, 127, 127, 0.384);
   justify-content: center;
   flex-direction: column;
   align-items: center;

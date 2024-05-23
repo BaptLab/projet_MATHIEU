@@ -1,0 +1,40 @@
+#legals {
+  margin-top: 250px;
+}
+
+#legals-container {
+  max-width: 700px;
+}
+.section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  margin-bottom: 15px;
+}
+.section-content {
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+/* #legals-container p {
+  margin-bottom: 25px;
+  align-self: flex-start;
+}
+
+#legals-container h3 {
+  align-self: flex-start;
+  margin-bottom: 20px;
+} */
+@media screen and (max-width: 1024px) {
+  #legals {
+    margin-top: 130px;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  #legals {
+    margin-top: 80px;
+  }
+}

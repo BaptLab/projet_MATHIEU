@@ -141,10 +141,10 @@ function Homepage() {
                   onClick={toggleTournageTarifSwitchMobile}
                   size="medium" // Set the size to small
                 >
-                  {!tarifSwitch && (
+                  {!tournageTarifSwitchMobile && (
                     <KeyboardArrowDownRoundedIcon />
                   )}
-                  {tarifSwitch && (
+                  {tournageTarifSwitchMobile && (
                     <KeyboardArrowUpRoundedIcon />
                   )}
                 </Fab>
@@ -172,10 +172,10 @@ function Homepage() {
                   onClick={toggleMixageTarifSwitchMobile}
                   size="medium" // Set the size to small
                 >
-                  {!tarifSwitch && (
+                  {!mixageTarifSwitchMobile && (
                     <KeyboardArrowDownRoundedIcon />
                   )}
-                  {tarifSwitch && (
+                  {mixageTarifSwitchMobile && (
                     <KeyboardArrowUpRoundedIcon />
                   )}
                 </Fab>
@@ -204,10 +204,10 @@ function Homepage() {
                   onClick={toggleMontageTarifSwitchMobile}
                   size="medium" // Set the size to small
                 >
-                  {!tarifSwitch && (
+                  {!montageTarifSwitchMobile && (
                     <KeyboardArrowDownRoundedIcon />
                   )}
-                  {tarifSwitch && (
+                  {montageTarifSwitchMobile && (
                     <KeyboardArrowUpRoundedIcon />
                   )}
                 </Fab>

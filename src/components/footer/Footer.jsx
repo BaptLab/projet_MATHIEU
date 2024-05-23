@@ -54,7 +54,7 @@ function Footer() {
           </svg>
         </a>
       </div>
-      <Link id="legal-mentions" to="/legals">
+      <Link id="legal-mentions" to="/Legals">
         Mentions légales
       </Link>
     </footer>

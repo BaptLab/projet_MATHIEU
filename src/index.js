@@ -13,6 +13,7 @@ import Homepage from "./pages/homepage/Homepage";
 import Matos from "./pages/matos/matos";
 import Projets from "./pages/projets/Projet";
 import Contact from "./pages/contact/Contact";
+import Legals from "./pages/legals/Legals";
 
 // ScrollToTop component
 function ScrollToTop() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/Matos" element={<Matos />} />
         <Route path="/Projets" element={<Projets />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/Legals" element={<Legals />} />
       </Routes>
     </Router>
   );
