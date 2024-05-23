@@ -11,7 +11,7 @@ import data from "../../datas/txt/homepage.json";
 import camera from "../../assets/images/icons/camera.svg";
 import headphones from "../../assets/images/icons/headphones.svg";
 import sound from "../../assets/images/icons/sound.svg";
-import studioImg from "../../assets/images/photos/studio/studio2.jpg";
+import studioImg from "../../assets/images/photos/studio/studio3.jpg";
 import { useState } from "react";
 import dataTarfis from "../../datas/txt/tarifs.json";
 import Button from "@mui/material/Button";

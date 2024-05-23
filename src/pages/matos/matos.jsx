@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Nav from "../../components/nav/Nav";
 import data from "../../datas/txt/matos.json";
-import matosImg from "../../assets/images/photos/studio/matos.jpg"; // Assurez-vous de fournir le chemin correct
+import matosImg from "../../assets/images/photos/matos/matos.jpeg"; // Assurez-vous de fournir le chemin correct
 import "./matos.css";
 import Cta from "../../components/CTA/Cta";
 import GoingUp from "../../components/btn/goingUp/GoingUp";
@@ -88,8 +88,10 @@ function Matos() {
               )
             )}
           </div>
+          <span className="block-separation"></span>
         </div>
       </main>
+
       <Cta />
 
       <Footer />

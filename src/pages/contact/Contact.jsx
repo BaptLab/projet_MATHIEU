@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Nav from "../../components/nav/Nav";
 import Button from "@mui/material/Button";
+import contactImg from "../../assets/images/photos/contact/contact2.jpg";
 import "./contact.css";
 import matosImg from "../../assets/images/photos/studio/matos.jpg";
 
@@ -56,7 +57,7 @@ function Contact() {
       <Header />
       <img
         className="page-img"
-        src={matosImg}
+        src={contactImg}
         alt="Votre description ici"
       />
       <div id="img-fade"></div>
@@ -64,6 +65,10 @@ function Contact() {
       <main id="contact-page-content">
         <div className="content-container">
           <h2 className="title">Mes disponibilités</h2>
+          <span id="calendar-disclaim">
+            (calendrier disponible sur tablette ou
+            ordinateur)
+          </span>
           <div id="google-calendar">
             <iframe
               src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&bgcolor=%23ffffff&showPrint=0&showTitle=0&showCalendars=0&showTz=0&src=YmFwdGlzdGUubGFiYXVuZUBnbWFpbC5jb20&src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5&color=%230B8043"

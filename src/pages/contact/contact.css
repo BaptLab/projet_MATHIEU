@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+#calendar-disclaim {
+  display: none;
+}
+
 #contact-page-content form {
   display: flex;
   flex-direction: column;
@@ -27,4 +31,15 @@
 
 .required-asterisk {
   color: rgba(255, 0, 0, 0.863);
+}
+
+@media screen and (max-width: 811px) {
+  #google-calendar {
+    display: none;
+  }
+
+  #calendar-disclaim {
+    display: block;
+    margin-bottom: 30px;
+  }
 }

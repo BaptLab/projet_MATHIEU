@@ -3,7 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Nav from "../../components/nav/Nav";
 import "./projets.css";
-import projetsImg from "../../assets/images/photos/projets/projet.png";
+import projetsImg from "../../assets/images/photos/projets/projet-background.jpg";
 import data from "../../datas/txt/projets.json";
 import Cta from "../../components/CTA/Cta";
 
@@ -19,7 +19,9 @@ function Projets() {
           className="content-container"
           id="projets-container"
         >
-          <h2 className="title">Mes projets</h2>
+          <h2 className="title" id="projets-title">
+            Mes projets
+          </h2>
           <div className="content-block">
             {Object.entries(data).map(
               ([category, projects]) => (

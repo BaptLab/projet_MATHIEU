@@ -1,6 +1,10 @@
 #projets-container {
   max-width: 900px;
 }
+
+#projets-container #projets-title {
+  margin-bottom: 0px;
+}
 .subtitle {
   margin-bottom: 15px;
   margin-top: 30px;
@@ -12,7 +16,7 @@
 }
 
 .projets-list a {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   text-decoration: inherit;
   color: white;
 }

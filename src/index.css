@@ -55,7 +55,7 @@ main {
 
 .page-img {
   width: 100vw;
-  height: 700px;
+  height: 500px;
   object-fit: cover;
   filter: brightness(85%);
   margin-top: 110px;
@@ -65,7 +65,7 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
-  top: 710px;
+  top: 510px;
   z-index: 0;
   width: 100vw;
   height: 100px; /* Adjust the height of the fade as needed */
@@ -98,11 +98,11 @@ main {
   }
 
   .page-img {
-    height: 500px;
+    height: 370px;
     margin-top: 90px;
   }
   #img-fade {
-    top: 390px;
+    top: 370px;
   }
 }
 
@@ -117,5 +117,10 @@ main {
   }
   #img-fade {
     top: 270px;
+  }
+
+  .subtitle {
+    display: flex;
+    justify-content: center;
   }
 }
