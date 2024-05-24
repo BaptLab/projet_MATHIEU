@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Nav from "../../components/nav/Nav";
 import Button from "@mui/material/Button";
-import contactImg from "../../assets/images/photos/contact/contact2.jpg";
+import contactImg from "../../assets/images/photos/contact/contact4.jpg";
 import "./contact.css";
 import matosImg from "../../assets/images/photos/studio/matos.jpg";
 
