@@ -9,9 +9,8 @@
     },
     "montage": {
       "description": [
-        "Recherche sonore",
-        "Sound design",
-        "Habillage sonore"
+        "Équilibrage des différentes pistes audio",
+        "Conformation aux normes audio du support de diffusion prévu"
       ],
       "prix": {
         "prix_heure": "60€ / heure",
@@ -22,8 +21,9 @@
     },
     "mixage": {
       "description": [
-        "Équilibrage des différentes pistes audio",
-        "Conformation aux normes audio du support de diffusion prévu"
+        "Recherche sonore",
+        "Sound design",
+        "Habillage sonore"
       ],
       "prix": {
         "prix_heure": "60€ / heure",

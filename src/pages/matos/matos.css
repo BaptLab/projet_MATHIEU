@@ -4,7 +4,7 @@
 }
 
 .matos-element {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   align-self: flex-start;
 }
 
@@ -14,4 +14,33 @@
 
 .content-block {
   width: 100%;
+}
+
+#matos-container {
+  width: 80%;
+}
+
+.content-block-container {
+  display: flex;
+  gap: 85px;
+}
+
+.content-block {
+  justify-content: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  .content-block-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .matos-element {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 811px) {
+  .matos-element {
+    margin-bottom: 6px;
+  }
 }

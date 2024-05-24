@@ -21,73 +21,81 @@ function Matos() {
       <div id="img-fade"></div>
       <Nav />
       <main>
-        <div className="content-container">
+        <div
+          className="content-container"
+          id="matos-container"
+        >
           <h2 className="title">Mon matériel</h2>
           <span className="intro matos">{data.intro}</span>
-          <div className="content-block matos">
-            <h3 className="subtitle">
-              Matériel de tournage
-            </h3>
-            {Object.entries(data.matos_tournage).map(
-              ([category, items]) => (
-                <React.Fragment key={category}>
-                  <h4 className="matos-category">
-                    {category}
-                  </h4>
-                  {Array.isArray(items)
-                    ? items.map((item, index) => (
-                        <span
-                          className="matos-element"
-                          key={index}
-                        >
-                          {item}
-                        </span>
-                      ))
-                    : Object.entries(items).map(
-                        ([subCategory, subItem]) => (
+          <div className="content-block-container">
+            <div className="content-block matos">
+              <h3 className="subtitle">
+                Matériel de tournage
+              </h3>
+              {Object.entries(data.matos_tournage).map(
+                ([category, items]) => (
+                  <React.Fragment key={category}>
+                    <h4 className="matos-category">
+                      {category}
+                    </h4>
+                    {Array.isArray(items)
+                      ? items.map((item, index) => (
                           <span
                             className="matos-element"
-                            key={subCategory}
+                            key={index}
                           >
-                            {subItem}
+                            {item}
                           </span>
-                        )
-                      )}
-                </React.Fragment>
-              )
-            )}
-          </div>
-          <div className="content-block matos">
-            <h3 className="subtitle">Matériel de Studio</h3>
-            {Object.entries(data.matos_studio).map(
-              ([category, items]) => (
-                <React.Fragment key={category}>
-                  <h4 className="matos-category">
-                    {category}
-                  </h4>
-                  {Array.isArray(items)
-                    ? items.map((item, index) => (
-                        <span
-                          className="matos-element"
-                          key={index}
-                        >
-                          {item}
-                        </span>
-                      ))
-                    : Object.entries(items).map(
-                        ([subCategory, subItem]) => (
+                        ))
+                      : Object.entries(items).map(
+                          ([subCategory, subItem]) => (
+                            <span
+                              className="matos-element"
+                              key={subCategory}
+                            >
+                              {subItem}
+                            </span>
+                          )
+                        )}
+                  </React.Fragment>
+                )
+              )}
+            </div>
+            <div className="content-block matos">
+              <h3 className="subtitle">
+                Matériel de Studio
+              </h3>
+              {Object.entries(data.matos_studio).map(
+                ([category, items]) => (
+                  <React.Fragment key={category}>
+                    <h4 className="matos-category">
+                      {category}
+                    </h4>
+                    {Array.isArray(items)
+                      ? items.map((item, index) => (
                           <span
                             className="matos-element"
-                            key={subCategory}
+                            key={index}
                           >
-                            {subItem}
+                            {item}
                           </span>
-                        )
-                      )}
-                </React.Fragment>
-              )
-            )}
+                        ))
+                      : Object.entries(items).map(
+                          ([subCategory, subItem]) => (
+                            <span
+                              className="matos-element"
+                              key={subCategory}
+                            >
+                              {subItem}
+                            </span>
+                          )
+                        )}
+                  </React.Fragment>
+                )
+              )}
+            </div>
           </div>
+
           <span className="block-separation"></span>
         </div>
       </main>
