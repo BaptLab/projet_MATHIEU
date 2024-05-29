@@ -108,9 +108,12 @@ function Homepage() {
             className="content-block"
             id="présentation-perso"
           >
-            <h2 className="title">Truepeak, c'est qui ?</h2>
+            <h2 className="title">{data.question2}</h2>
             <div className="présentation-perso-content">
-              <img id="pp" src={img} />
+              <div className="pp-container">
+                <img id="pp" src={img} />
+                <h3 id="name">{data.noms}</h3>
+              </div>
               <p>{data.présentation_perso}</p>
             </div>
           </div>

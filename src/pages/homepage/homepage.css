@@ -14,6 +14,10 @@
   margin-bottom: 30px;
 }
 
+#name {
+  margin-top: 20px;
+}
+
 .projet-container img:hover {
   width: 244px;
   cursor: pointer;
@@ -21,8 +25,10 @@
   box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.5); /* Increased shadow values */
 }
 
-#nom {
-  margin-bottom: 15px;
+.pp-container {
+  margin-bottom: 25px;
+  width: 36%;
+  text-align: center;
 }
 .projet-container .contentBlock-container {
   width: 50%;
@@ -109,7 +115,7 @@
   align-items: center;
 }
 .content-block #pp {
-  width: 36%;
+  width: 100%;
   height: auto;
   border-radius: 35%;
   filter: brightness(90%);
@@ -193,6 +199,9 @@
   .intro-text {
     max-width: 500px;
   }
+  .pp-container {
+    width: 100%;
+  }
 
   .présentation-perso-content {
     flex-direction: column;
@@ -201,7 +210,7 @@
   }
   .présentation-perso-content #pp {
     width: 300px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
   .présentation-perso-content p {
     width: 100%;

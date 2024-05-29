@@ -25,7 +25,7 @@ function Matos() {
           className="content-container"
           id="matos-container"
         >
-          <h2 className="title">Mon matériel</h2>
+          <h2 className="title">{data.titre}</h2>
           <span className="intro matos">{data.intro}</span>
           <div className="content-block-container">
             <div className="content-block matos">

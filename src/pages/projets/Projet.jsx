@@ -36,15 +36,19 @@ function Projets() {
                     {category}
                   </h3>
                   <div className="projets-list">
-                    {projects.map((project, index) => (
-                      <a
-                        className="projet-element"
-                        href={project.link}
-                        key={index}
-                      >
-                        {project.title}
-                      </a>
-                    ))}
+                    {Array.isArray(projects) ? (
+                      projects.map((project, index) => (
+                        <a
+                          className="projet-element"
+                          href={project.link}
+                          key={index}
+                        >
+                          {project.title}
+                        </a>
+                      ))
+                    ) : (
+                      <p>No projects found</p>
+                    )}
                   </div>
                 </div>
               )
