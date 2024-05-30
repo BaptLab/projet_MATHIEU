@@ -5,13 +5,46 @@
   align-items: center;
 }
 
-#calendar-disclaim {
-  display: none;
+#date-container {
+  margin-bottom: 0px;
+}
+
+#date-selector-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#date-container .input-container {
+  font-size: 0.85em;
+  margin-bottom: 0px;
+}
+
+#contact-page-content #checkbox-date-container {
+  font-size: 0.85em;
+  margin-bottom: 0px;
+}
+
+#message {
+  height: 160px;
+  width: 100%;
+}
+#success-msg,
+#error-msg {
+  text-align: center;
+  margin-top: 30px;
+  max-width: 100%;
+  align-self: center;
+}
+#checkbox-date-container label {
+  text-align: center;
 }
 
 #contact-page-content form {
   display: flex;
   flex-direction: column;
+  max-width: 280px;
 }
 
 #contact-page-content form .input-container {
@@ -32,14 +65,16 @@
   color: rgba(255, 0, 0, 0.863);
 }
 
+#google-calendar-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 811px) {
-  #google-calendar {
+  #google-calendar-desktop {
     display: none;
   }
-
-  #calendar-disclaim {
+  #google-calendar-mobile {
     display: block;
-    margin-bottom: 30px;
-    text-align: center;
+    width: 100%;
   }
 }

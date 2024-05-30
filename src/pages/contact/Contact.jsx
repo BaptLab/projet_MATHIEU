@@ -15,12 +15,25 @@ function Contact() {
   const [company, setCompany] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [noDate, setNoDate] = useState(false);
+  const [messageType, setMessageType] = useState(""); // New state for message type
 
   const HandleSubmit = (e) => {
     e.preventDefault();
 
+    if (!noDate && !startDate && !endDate) {
+      alert(
+        "Veuillez préciser au moins une date ou indiquer l'absence de dates !"
+      );
+      return;
+    }
+
     const templateParams = {
       from_name: `${firstName} ${lastName}`,
+      endDate: noDate ? "Date non renseignée" : endDate,
+      startDate: noDate ? "Date non renseignée" : startDate,
       company,
       subject,
       message,
@@ -29,10 +42,10 @@ function Contact() {
 
     emailjs
       .send(
-        "service_w1km3j9",
-        "template_3c9gkto",
+        "service_a86o8ad",
+        "template_i1ir0g5",
         templateParams,
-        "D8y3pdc18mEveJ6es"
+        "XEhpPPR0padVV3jKf"
       )
       .then((response) => {
         console.log(
@@ -40,9 +53,11 @@ function Contact() {
           response.status,
           response.text
         );
+        setMessageType("success"); // Set message type to success
       })
       .catch((error) => {
         console.error("FAILED...", error);
+        setMessageType("error"); // Set message type to error
       });
 
     setFirstName("");
@@ -50,6 +65,9 @@ function Contact() {
     setCompany("");
     setSubject("");
     setMessage("");
+    setEndDate("");
+    setStartDate("");
+    setNoDate(false);
   };
 
   return (
@@ -65,13 +83,10 @@ function Contact() {
       <main id="contact-page-content">
         <div className="content-container">
           <h2 className="title">Mes disponibilités</h2>
-          <span id="calendar-disclaim">
-            (calendrier disponible sur tablette ou
-            ordinateur)
-          </span>
-          <div id="google-calendar">
+
+          <div id="google-calendar-desktop">
             <iframe
-              src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&bgcolor=%23ffffff&showPrint=0&showTitle=0&showCalendars=0&showTz=0&src=YmFwdGlzdGUubGFiYXVuZUBnbWFpbC5jb20&src=ZnIuZnJlbmNoI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5&color=%230B8043"
+              src="https://calendar.google.com/calendar/embed?src=truepeak.prod%40gmail.com&ctz=UTC&showPrint=0&showTitle=0&showCalendars=0&showTz=0"
               style={{
                 borderWidth: 0,
                 borderRadius: 15,
@@ -81,6 +96,23 @@ function Contact() {
               }} // Combine styles into a single object
               width="800"
               height="600"
+              frameBorder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+          <div id="google-calendar-mobile">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=truepeak.prod%40gmail.com&ctz=UTC&showPrint=0&showTitle=0&showCalendars=0&showTz=0&mode=AGENDA"
+              style={{
+                borderWidth: 0,
+                borderRadius: 5,
+                padding: 0,
+                backgroundColor: "white",
+                marginBottom: 60,
+              }}
+              width="100%"
+              min-width="220"
+              height="400"
               frameBorder="0"
               scrolling="no"
             ></iframe>
@@ -141,6 +173,61 @@ function Contact() {
                 required
               />
             </div>
+            <div
+              id="date-container"
+              className="input-container"
+            >
+              <label htmlFor="subject">
+                Dates hypothétiques du projet{" "}
+                <span className="required-asterisk">*</span>
+              </label>
+              <div id="date-selector-container">
+                <div className="input-container">
+                  <label htmlFor="startDate">
+                    Date de début
+                  </label>
+                  <input
+                    type="date"
+                    id="startDate"
+                    value={startDate}
+                    onChange={(e) =>
+                      setStartDate(e.target.value)
+                    }
+                    disabled={noDate} // Disable if checkbox is checked
+                  />
+                </div>
+                <div className="input-container">
+                  <label htmlFor="endDate">
+                    Date de fin
+                  </label>
+                  <input
+                    type="date"
+                    id="endDate"
+                    value={endDate}
+                    onChange={(e) =>
+                      setEndDate(e.target.value)
+                    }
+                    disabled={noDate} // Disable if checkbox is checked
+                  />
+                </div>
+              </div>
+              <div
+                id="checkbox-date-container"
+                className="input-container"
+              >
+                <label htmlFor="noDate">
+                  Je ne connais pas encore les dates{" "}
+                </label>
+                <input
+                  type="checkbox"
+                  id="noDate"
+                  checked={noDate}
+                  onChange={(e) =>
+                    setNoDate(e.target.checked)
+                  }
+                />
+              </div>
+            </div>
             <div className="input-container">
               <label htmlFor="message">
                 Votre message{" "}
@@ -160,6 +247,23 @@ function Contact() {
             >
               Envoyer
             </Button>
+            {messageType === "success" && (
+              <span id="success-msg">
+                Votre message a bien été envoyé !
+              </span>
+            )}
+            {messageType === "error" && (
+              <span id="success-msg">
+                <span id="error-msg">
+                  Il y'a eu une erreur lors de l'envoi du
+                  message.
+                  <br />
+                  <br />
+                  Contactez directement
+                  truepeak.prod@gmail.com
+                </span>
+              </span>
+            )}
           </form>
         </div>
       </main>
