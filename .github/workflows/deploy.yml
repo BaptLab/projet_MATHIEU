@@ -1,18 +1,29 @@
-name: Deploy to FTP
+name: Build and Deploy to FTP
 
 on:
   push:
     branches:
-      - gh-pages  # Trigger on push to gh-pages branch
+      - main  # Trigger on push to main branch
 
 jobs:
-  deploy:
-    name: Deploy
+  build-and-deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Specify the Node.js version you need
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Project
+      run: npm run build  # Ensure this command builds your project
 
     - name: Upload to FTP Server
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -20,5 +31,5 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./  # Directory of your website files in the repository (root of gh-pages branch)
+        local-dir: ./build  # Adjust this to your build output directory
         server-dir: /www/  # Ensure this ends with a slash to denote a directory
