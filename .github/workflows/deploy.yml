@@ -21,4 +21,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./  # Directory of your website files in the repository
-        server-dir: /www  # The target directory on your FTP server
+        server-dir: /www/  # The target directory on your FTP server
