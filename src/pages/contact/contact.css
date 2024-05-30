@@ -68,7 +68,9 @@
 #google-calendar-mobile {
   display: none;
 }
-
+#noDate {
+  align-self: center;
+}
 @media screen and (max-width: 811px) {
   #google-calendar-desktop {
     display: none;

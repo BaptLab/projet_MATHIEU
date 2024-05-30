@@ -53,7 +53,10 @@ function Matos() {
                               className="matos-element"
                               key={subCategory}
                             >
-                              {subItem}
+                              {subCategory}:{" "}
+                              {Array.isArray(subItem)
+                                ? subItem.join(", ")
+                                : subItem}
                             </span>
                           )
                         )}
@@ -86,7 +89,10 @@ function Matos() {
                               className="matos-element"
                               key={subCategory}
                             >
-                              {subItem}
+                              {subCategory}:{" "}
+                              {Array.isArray(subItem)
+                                ? subItem.join(", ")
+                                : subItem}
                             </span>
                           )
                         )}
@@ -95,13 +101,10 @@ function Matos() {
               )}
             </div>
           </div>
-
           <span className="block-separation"></span>
         </div>
       </main>
-
       <Cta />
-
       <Footer />
       <GoingUp />
     </div>

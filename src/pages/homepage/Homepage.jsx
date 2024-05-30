@@ -53,6 +53,11 @@ function Homepage() {
               <h3>{value}</h3>
             </div>
           ))}
+          {dataTarfis.tarifs_data[activity].info && (
+            <span className="info-prix" span>
+              * {dataTarfis.tarifs_data[activity].info}
+            </span>
+          )}
         </div>
       </div>
     );
