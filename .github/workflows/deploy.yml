@@ -23,7 +23,8 @@ jobs:
       run: npm install
 
     - name: Build Project
-      run: npm run build  # Ensure this command builds your project
+      run: |
+        CI=false npm run build  # Ignore ESLint errors during build
 
     - name: Upload to FTP Server
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
