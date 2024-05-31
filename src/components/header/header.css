@@ -14,11 +14,6 @@ header {
   border-bottom: 1px solid rgba(41, 40, 40, 0.562);
 }
 
-#subtitle-infos {
-  position: absolute;
-  color: transparent;
-}
-
 header #header-title {
   cursor: pointer;
 }
