@@ -10,6 +10,10 @@ function Header() {
       >
         TRUEPEAK PRODUCTIONS
       </span>
+      <span id="subtitle-infos">
+        Ingénieur du son - Technicien du son - Paris et
+        banlieux proches - tournage et prise de son{" "}
+      </span>
     </header>
   );
 }
