@@ -25,19 +25,19 @@ function Matos() {
           className="content-container"
           id="matos-container"
         >
-          <h2 className="title">{data.titre}</h2>
+          <h1 className="title">{data.titre}</h1>
           <span className="intro matos">{data.intro}</span>
           <div className="content-block-container">
             <div className="content-block matos">
-              <h3 className="subtitle">
+              <h2 className="subtitle">
                 Matériel de tournage
-              </h3>
+              </h2>
               {Object.entries(data.matos_tournage).map(
                 ([category, items]) => (
                   <React.Fragment key={category}>
-                    <h4 className="matos-category">
+                    <h3 className="matos-category">
                       {category}
-                    </h4>
+                    </h3>
                     {Array.isArray(items)
                       ? items.map((item, index) => (
                           <span
@@ -65,15 +65,15 @@ function Matos() {
               )}
             </div>
             <div className="content-block matos">
-              <h3 className="subtitle">
+              <h2 className="subtitle">
                 Matériel de Studio
-              </h3>
+              </h2>
               {Object.entries(data.matos_studio).map(
                 ([category, items]) => (
                   <React.Fragment key={category}>
-                    <h4 className="matos-category">
+                    <h3 className="matos-category">
                       {category}
-                    </h4>
+                    </h3>
                     {Array.isArray(items)
                       ? items.map((item, index) => (
                           <span

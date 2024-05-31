@@ -11,7 +11,11 @@ function Projets() {
   return (
     <div className="page-container">
       <Header />
-      <img className="page-img" src={projetsImg} />
+      <img
+        className="page-img"
+        src={projetsImg}
+        alt="illustration"
+      />
       <div id="img-fade"></div>
       <Nav />
       <main>
@@ -19,9 +23,9 @@ function Projets() {
           className="content-container"
           id="projets-container"
         >
-          <h2 className="title" id="projets-title">
+          <h1 className="title" id="projets-title">
             Mes projets
-          </h2>
+          </h1>
           <div className="content-block">
             {Object.entries(data).map(
               ([category, projects]) => (
@@ -29,12 +33,12 @@ function Projets() {
                   key={category}
                   className="category-container"
                 >
-                  <h3
+                  <h2
                     className="subtitle"
                     id={category.toLowerCase()}
                   >
                     {category}
-                  </h3>
+                  </h2>
                   <div className="projets-list">
                     {Array.isArray(projects) ? (
                       projects.map((project, index) => (

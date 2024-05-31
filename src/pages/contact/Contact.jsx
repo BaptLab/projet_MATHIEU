@@ -82,6 +82,8 @@ function Contact() {
       <Nav />
       <main id="contact-page-content">
         <div className="content-container">
+          <h1 className="title">Me contacter</h1>
+
           <h2 className="title">Mes disponibilités</h2>
 
           <div id="google-calendar-desktop">
@@ -119,7 +121,7 @@ function Contact() {
           </div>
         </div>
         <div className="content-container">
-          <h2 className="title">Me contacter</h2>
+          <h2 className="title">Formulaire de contact</h2>
           <form onSubmit={HandleSubmit}>
             <div className="input-container">
               <label htmlFor="firstName">
@@ -177,7 +179,7 @@ function Contact() {
               id="date-container"
               className="input-container"
             >
-              <label htmlFor="subject">
+              <label htmlFor="date">
                 Dates hypothétiques du projet{" "}
                 <span className="required-asterisk">*</span>
               </label>

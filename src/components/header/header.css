@@ -14,6 +14,10 @@ header {
   border-bottom: 1px solid rgba(41, 40, 40, 0.562);
 }
 
+header #header-title {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1024px) {
   header {
     justify-content: start;

@@ -98,11 +98,16 @@ function Homepage() {
   return (
     <div className="page-container">
       <Header />
-      <img className="page-img" src={studioImg} />
+      <img
+        className="page-img"
+        src={studioImg}
+        alt="Studio de mixage"
+      />
       <div id="img-fade"></div>
       <Nav />
       <main>
         <div className="content-container">
+          <h1 className="title">Accueil</h1>
           <div className="content-block intro-block">
             <h2 className="title">{data.question}</h2>
             <span className="intro-text">
@@ -116,7 +121,11 @@ function Homepage() {
             <h2 className="title">{data.question2}</h2>
             <div className="présentation-perso-content">
               <div className="pp-container">
-                <img id="pp" src={img} />
+                <img
+                  id="pp"
+                  src={img}
+                  alt="photo de profil"
+                />
                 <h3 id="name">{data.noms}</h3>
               </div>
               <p>{data.présentation_perso}</p>
@@ -274,6 +283,7 @@ function Homepage() {
                     <img
                       className="content-img"
                       src={projet1}
+                      alt='affiche du film "Instantanée"'
                     />
                   </a>
                 </div>
@@ -286,6 +296,7 @@ function Homepage() {
                     <img
                       className="content-img"
                       src={projet2}
+                      alt='affiche du film "Nouveau souffle"'
                     />
                   </a>
                 </div>

@@ -18,15 +18,15 @@ function Legals() {
           className="content-container"
           id="legals-container"
         >
-          <h2 className="title" id="projets-title">
+          <h1 className="title" id="projets-title">
             Mentions légales
-          </h2>
+          </h1>
           <div className="content-block">
             {sections.map((section, index) => (
               <div key={index} className="section">
-                <h3 className="section-title">
+                <h2 className="section-title">
                   {section.title}
-                </h3>
+                </h2>
                 {section.content.map((item, idx) => (
                   <p key={idx} className="section-content">
                     {item.label && (
