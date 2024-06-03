@@ -7,21 +7,10 @@
           "label": "Nom de l'auto-entrepreneur",
           "value": "Mathieu Lefebvre"
         },
-        {
-          "label": "Activité",
-          "value": "Ingénieur du son"
-        },
-        {
-          "label": "Adresse",
-          "value": "[Votre adresse]"
-        },
-        {
-          "label": "Numéro de téléphone",
-          "value": "[Votre numéro de téléphone]"
-        },
+
         {
           "label": "Adresse e-mail",
-          "value": "[Votre adresse e-mail]"
+          "value": "truepeak.prod@gmail.com"
         }
       ]
     },
@@ -30,11 +19,11 @@
       "content": [
         {
           "label": "Hébergeur",
-          "value": "[Nom de l'hébergeur]"
+          "value": "OVH"
         },
         {
           "label": "Adresse",
-          "value": "[Adresse de l'hébergeur]"
+          "value": "2, rue Kellermann, 59100 Roubaix, France"
         }
       ]
     },
@@ -42,7 +31,7 @@
       "title": "Propriété intellectuelle",
       "content": [
         {
-          "value": "Le contenu de ce site, y compris mais sans s'y limiter, les textes, images, vidéos et éléments graphiques, est la propriété de [Votre nom]. Toute reproduction ou utilisation non autorisée est interdite."
+          "value": "Le contenu de ce site, y compris mais sans s'y limiter, les textes, images, vidéos et éléments graphiques, est la propriété de Mathieu Lefebvre. Toute reproduction ou utilisation non autorisée est interdite."
         }
       ]
     },
