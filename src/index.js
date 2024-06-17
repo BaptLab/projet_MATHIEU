@@ -29,7 +29,7 @@ function ScrollToTop() {
 // Main App component
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
