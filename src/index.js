@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   useLocation,
@@ -10,10 +10,10 @@ import "./index.css";
 
 // Import your page components
 import Homepage from "./pages/homepage/Homepage";
-import Matos from "./pages/matos/matos";
-import Projets from "./pages/projets/Projet";
 import Contact from "./pages/contact/Contact";
 import Legals from "./pages/legals/Legals";
+import Matos from "./pages/matos/matos";
+import Projets from "./pages/projets/Projet";
 
 // ScrollToTop component
 function ScrollToTop() {
@@ -29,7 +29,7 @@ function ScrollToTop() {
 // Main App component
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -37,17 +37,16 @@ function App() {
         <Route path="/Projets" element={<Projets />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Legals" element={<Legals />} />
-        <Route path="/*" element={<Homepage />} />
+        <Route path="*" element={<Homepage />} />
       </Routes>
     </Router>
   );
 }
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root")
-);
-root.render(
+const root = document.getElementById("root");
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  root
 );
