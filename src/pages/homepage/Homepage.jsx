@@ -20,12 +20,15 @@ import KeyboardArrowUpRoundedIcon from "@mui/icons-material/KeyboardArrowUpRound
 
 import projet1 from "../../assets/images/photos/projets/projet1.png";
 import projet2 from "../../assets/images/photos/projets/projet2.png";
+import projet0 from "../../assets/images/photos/projets/AFFICHE_DOCU.jpg";
 
 import "./homepage.css";
 import GoingUp from "../../components/btn/goingUp/GoingUp";
 import Cta from "../../components/CTA/Cta";
 function Homepage() {
   const customNavigate = useCustomNavigate();
+  const link0 =
+    "https://x.com/Sports_gouv/status/1813947774045757662?mx=2";
   const link1 =
     "https://www.allocine.fr/film/fichefilm_gen_cfilm=312684.html";
   const link2 = "https://nouveausouffledocu.fr/";
@@ -276,14 +279,14 @@ function Homepage() {
               <div className="activité-container projet-container">
                 <div className="contentBlock-container">
                   <a
-                    href={link1}
+                    href={link0}
                     target="_blank"
                     className="contentBlock-content"
                   >
                     <img
                       className="content-img"
-                      src={projet1}
-                      alt='affiche du film "Instantanée"'
+                      src={projet0}
+                      alt='affiche du film "Athlètes"'
                     />
                   </a>
                 </div>
@@ -297,6 +300,19 @@ function Homepage() {
                       className="content-img"
                       src={projet2}
                       alt='affiche du film "Nouveau souffle"'
+                    />
+                  </a>
+                </div>
+                <div className="contentBlock-container">
+                  <a
+                    href={link1}
+                    target="_blank"
+                    className="contentBlock-content"
+                  >
+                    <img
+                      className="content-img"
+                      src={projet1}
+                      alt='affiche du film "Instantanée"'
                     />
                   </a>
                 </div>
